@@ -187,7 +187,7 @@ export default function Hero() {
             <br />
             <em style={{ fontWeight: 300, color: "#3a3840" }}>developer</em>
             <br />
-            <span style={{ color: "#d4a843" }}>∙</span> builder.
+            <span style={{ color: "#d4a843" }}>∙</span> problem solver.
           </h1>
 
           <p
