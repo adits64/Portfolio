@@ -1,0 +1,225 @@
+import academixImg from "../assets/academix.png"
+import wanderwiseImg from "../assets/wanderwise.jpg"
+
+export const ALL_SKILLS = [
+  "React",
+  "JavaScript",
+  "Node.js",
+  "Express.js",
+  "MongoDB",
+  "Mongoose",
+  "REST APIs",
+  "JWT Authentication",
+  "Tailwind CSS",
+  "Git",
+  "GitHub",
+  "HTML5",
+  "CSS3",
+  "Postman",
+  "Vercel",
+  "Render",
+]
+
+export const projects = [
+  {
+    id: 1,
+    num: "01",
+    title: "Academix",
+    category: "Full-Stack · MERN Platform",
+    year: "2026",
+    link: "https://academix-nine-kappa.vercel.app/",
+    ctaText: "Explore Live Platform →",
+    desc: "An all-in-one class and institute management platform for administrators, instructors, and students. Features role-based access control, automated course scheduling, attendance tracking, and study material distribution in a unified workspace.",
+    stack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "JWT Auth",
+      "REST APIs",
+      "Tailwind CSS",
+      "RBAC"
+    ],
+    accent: "#38bdf8",
+    img: academixImg,
+  },
+  {
+    id: 2,
+    num: "02",
+    title: "WanderWise",
+    category: "Full-Stack · Travel & Itinerary Platform",
+    year: "2026",
+    link: "https://github.com/adits64/wander-wise",
+    ctaText: "View Repository →",
+    desc: "A comprehensive travel discovery and trip planning web application. Enables travelers to explore curated destinations, construct customized day-by-day itineraries, manage bookings, and bookmark travel spots with persistent user data.",
+    stack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST APIs",
+      "JWT Auth",
+      "Tailwind CSS",
+      "Git",
+    ],
+    accent: "#d4a843",
+    img: wanderwiseImg,
+  },
+]
+
+export const cyclingSkills = [
+  {
+    id: "react",
+    name: "React",
+    category: "Frontend UI & Component Architecture",
+    accent: "#61DAFB",
+    desc: "Building responsive single-page applications, custom hooks, and modular UI workflows.",
+    icon: "react",
+  },
+  {
+    id: "nodejs",
+    name: "Node.js",
+    category: "Backend Runtime & Server Architecture",
+    accent: "#68A063",
+    desc: "Developing performant, scalable server environments and asynchronous request handling.",
+    icon: "nodejs",
+  },
+  {
+    id: "express",
+    name: "Express.js",
+    category: "RESTful API Framework",
+    accent: "#E2DFD8",
+    desc: "Designing robust API routing, custom middleware pipelines, error handling, and security.",
+    icon: "express",
+  },
+  {
+    id: "mongodb",
+    name: "MongoDB",
+    category: "NoSQL Database & Aggregations",
+    accent: "#47A248",
+    desc: "Designing flexible document schemas, indexing strategies, and high-performance queries.",
+    icon: "mongodb",
+  },
+  {
+    id: "javascript",
+    name: "JavaScript (ES6+)",
+    category: "Core Language & Async Programming",
+    accent: "#F7DF1E",
+    desc: "Modern ECMAScript, closures, event loop, Promises, async/await, and DOM manipulation.",
+    icon: "javascript",
+  },
+  {
+    id: "jwt",
+    name: "JWT & Security",
+    category: "Authentication & Role-Based Access",
+    accent: "#D4A843",
+    desc: "Securing routes, stateless session tokens, password hashing with bcrypt, and RBAC.",
+    icon: "jwt",
+  },
+  {
+    id: "tailwind",
+    name: "Tailwind CSS",
+    category: "Utility-First Styling",
+    accent: "#38BDF8",
+    desc: "Crafting bespoke dark-mode interfaces, fluid responsive layouts, and polished micro-interactions.",
+    icon: "tailwind",
+  },
+  {
+    id: "git",
+    name: "Git & GitHub",
+    category: "Version Control & Collaboration",
+    accent: "#F05032",
+    desc: "Feature branching, atomic commits, pull request workflows, and collaborative codebase management.",
+    icon: "git",
+  },
+  {
+    id: "rest",
+    name: "REST APIs",
+    category: "API Architecture & Integration",
+    accent: "#A78BFA",
+    desc: "Resource modeling, standard HTTP status handling, pagination, query filtering, and Postman testing.",
+    icon: "rest",
+  },
+]
+
+export const learning = [
+  {
+    label: "TypeScript — Type-safe full-stack architectures",
+    pct: 60,
+    accent: "#38bdf8",
+    note: "Generics, strict typing & API contracts",
+  },
+  {
+    label: "AI Integration — OpenAI & Anthropic LLM APIs",
+    pct: 55,
+    accent: "#fb923c",
+    note: "Streaming completions & tool calling",
+  },
+  {
+    label: "Angular — Signals & Standalone Components",
+    pct: 45,
+    accent: "#4ade80",
+    note: "Enterprise component patterns & RxJS",
+  },
+  {
+    label: "RAG Pipelines & Vector Search — LangChain & Pinecone",
+    pct: 35,
+    accent: "#7c6cd4",
+    note: "Document embeddings & semantic retrieval",
+  },
+]
+
+export const bgExpress = [
+  "const app = express()",
+  "app.use(express.json())",
+  "app.use('/api/courses', courseRouter)",
+  "app.use('/api/trips', itineraryRouter)",
+  "",
+  "mongoose.connect(MONGO_URI)",
+  "  .then(() => console.log('Database connected'))",
+  "",
+  "app.listen(PORT, () => {",
+  "  console.log(`Server running on port ${PORT}`)",
+  "})",
+]
+
+export const bgSchema = [
+  "const AcademixSchema = new Schema({",
+  "  title:       { type: String, required: true },",
+  "  instructor:  { type: ObjectId, ref: 'User' },",
+  "  enrolled:    [{ type: ObjectId, ref: 'Student' }],",
+  "  schedule:    { days: [String], time: String },",
+  "  isActive:    { type: Boolean, default: true }",
+  "})",
+  "",
+  "export default model('Course', AcademixSchema)",
+]
+
+export const bgRouter = [
+  "router.get('/my-itinerary', verifyToken, async (req, res) => {",
+  "  const trips = await Itinerary",
+  "    .find({ traveler: req.user._id })",
+  "    .populate('destinations')",
+  "    .sort({ startDate: 1 })",
+  "  res.json({ success: true, trips })",
+  "})",
+  "",
+  "router.post('/enroll', verifyToken, checkRole(['student']), async (req, res) => {",
+  "  const enrollment = await Course.enroll(req.user._id, req.body.courseId)",
+  "  res.status(201).json(enrollment)",
+  "})",
+]
+
+export const bgMiddleware = [
+  "export const verifyToken = async (req, res, next) => {",
+  "  const authHeader = req.headers.authorization",
+  "  if (!authHeader?.startsWith('Bearer ')) {",
+  "    return res.status(401).json({ msg: 'Unauthorized access' })",
+  "  }",
+  "  const token = authHeader.split(' ')[1]",
+  "  const decoded = jwt.verify(token, process.env.JWT_SECRET)",
+  "  req.user = await User.findById(decoded.id).select('-password')",
+  "  next()",
+  "}",
+]
